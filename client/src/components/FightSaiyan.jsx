@@ -126,28 +126,29 @@ const FightSaiyan = () => {
                 <button className="button2 fightbutton1" onClick={handleFight}
                     disabled={!selectedSaiyan1 || !selectedSaiyan2 || fighting}>Fight</button>
                 <button className="button2 fightbutton2" onClick={refreshPage}>Fight Again</button>
-                {selectedSaiyan1 && selectedSaiyan2 && (
-
-                    <div className="fighttext">
-                        <p>
-                            {selectedSaiyan1.name} vs {selectedSaiyan2.name}
-                        </p>
-                        <p>Damage Taken by {selectedSaiyan1.name}: {damageTakenSaiyan1}  |
-                            Damage Taken by {selectedSaiyan2.name}: {damageTakenSaiyan2}</p>
-                        <p>{selectedSaiyan1.name} used {randomMoveSaiyan1} {getRandomDamage.damageTakenSaiyan1} | {selectedSaiyan2.name} used {randomMoveSaiyan2} {getRandomDamage.damageTakenSaiyan2}</p>
-                    </div>
-                )}
-                {fightResult && (
-                    <div>
-                        {fightResult.winner ? (
-                            <div>
-                                <p className="win">{`${fightResult.winner.name} wins the fight!`}</p>
-                            </div>
-                        ) : (
-                            <p></p>
-                        )}
-                    </div>
-                )}
+                <div className="fighttextcontain">
+                    {selectedSaiyan1 && selectedSaiyan2 && (
+                        <div className="fighttext">
+                            <p>
+                                {selectedSaiyan1.name} vs {selectedSaiyan2.name}
+                            </p>
+                            <p>Damage Taken by {selectedSaiyan1.name}: {damageTakenSaiyan1}  |
+                                Damage Taken by {selectedSaiyan2.name}: {damageTakenSaiyan2}</p>
+                            <p>{selectedSaiyan1.name} used {randomMoveSaiyan1} {getRandomDamage.damageTakenSaiyan1} | {selectedSaiyan2.name} used {randomMoveSaiyan2} {getRandomDamage.damageTakenSaiyan2}</p>
+                        </div>
+                    )}
+                    {fightResult && (
+                        <div>
+                            {fightResult.winner ? (
+                                <div>
+                                    <p className="win">{`${fightResult.winner.name} wins the fight!`}</p>
+                                </div>
+                            ) : (
+                                <p></p>
+                            )}
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

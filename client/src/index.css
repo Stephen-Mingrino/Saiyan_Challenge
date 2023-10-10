@@ -24,6 +24,7 @@ code {
   height: 100vh;
 }
 .form {
+  z-index: 1;
   background-color: #141415;
   border-radius: 20px;
   box-sizing: border-box;
@@ -60,6 +61,7 @@ code {
 }
 h1{
   color: greenyellow;
+  text-align: center;
 }
 
 .input {
@@ -89,8 +91,15 @@ h1{
   outline: 0;
   text-align: center;
   width: 100%;
-  
+
+  transition: 0.3s ease all
 }
+.submit:hover{
+  box-shadow: 0px 10px 20px -5px greenyellow;
+  background-color: greenyellow;
+
+}
+
 .placeholder {
   
   color: #ff7b00;
@@ -112,14 +121,20 @@ h1{
 
 }
 .tablepos{
+ 
+  position: relative;
   margin-right:5vw;
   align-items: center;
   display: inline block;
   justify-content: flex-end;
   padding-left: 6vw;
   margin-bottom: 50px;
+  margin-top:  -80px;
+  z-index: 1;
 }
 .styled-table {
+
+
   justify-content: center;
   display: inline;
   border-collapse: collapse;
@@ -139,6 +154,7 @@ h1{
 
 .styled-table th,
 .styled-table td {
+  background-color: #141415;
   padding: 12px 15px;
   border: solid 2px;
   border-radius: 20%;
@@ -169,19 +185,30 @@ h1{
 
   outline: 0;
   text-align: center;
+  transition: 0.3s ease all
   
 }
+.button2:hover{
+  background-color: greenyellow;
+ 
+}
+
+
+
+
 
 .fightcard{margin-top: 60px;
-  background-color: #3e3f3f;
+  position: relative;
+  background-color:#141415;
   
   border: solid 2px;
   border-color: greenyellow;
   width: 850px;
-  height: 450px;
+  height: 600px;
   color:#ff7b00;
   margin: auto;
   font-size: 20px;
+  
 }
 
 .fightitems{
@@ -199,7 +226,7 @@ text-align: center;
 margin: 5px;
 }
 .fighttext{
-  font-size: 25px;
+  font-size: 20px;
 }
 .win{
   color: greenyellow;
@@ -217,4 +244,217 @@ margin: 5px;
   padding: 4px 20px 0;
   width: 100%;
   color: greenyellow;
+}
+
+.fighttextcontain{
+  border: solid 5px;
+  border-color: greenyellow;
+  border-radius:2px;
+  box-shadow: 10px 5px 60px black;
+
+  
+  background-color: #3e3f3f;
+  width: 700px;
+  height: 300px;
+justify-content: center;
+display: inline-block;
+margin-top: 50px;
+}
+
+.dotcontainer{
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+.dot{
+  background-color: greenyellow;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  box-shadow: -2px 0px 20px 3px greenyellow;
+ animation-name: updown;
+ animation-duration:60s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+ z-index: 0;
+  
+}
+@keyframes updown {
+  0% {
+    transform:  matrix(1, 0.5, -0.5, 1, 100, 50) translateY(0px) ;
+    
+  }
+  50% {
+    transform:translateY(500px);
+  
+  }
+  100%{transform: matrix(1, 0.5, -0.5, 1, 100, 50) translateY(0px);}
+  
+}
+
+.zero {
+  margin-top: -200px;
+}
+.two{
+
+  z-index: 0;
+  margin-top: 300px;
+}
+
+.three{
+  z-index: 0;
+  margin-top: 600px;
+}
+
+.four{
+  z-index: 0;
+  margin-top: 900px;
+}
+
+.five{
+  margin-top: 1200px;
+}
+.dotcontainer2{
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.dot2{
+
+  background-color: greenyellow;
+  height: 5px;
+  width: 5px;
+
+  border-radius: 50%;
+  box-shadow: -2px 0px 20px 3px greenyellow;
+ animation-name: up-down;
+ animation-duration:40s;
+ animation-iteration-count: infinite;
+ animation-timing-function:linear;
+ z-index: 0;
+  
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0px) ;
+    
+  }
+  50% {
+    transform:translateY(500px);
+  
+  }
+  100%{transform:  translateY(0px);}
+  
+}
+
+.six{
+  margin-top: 100px;
+}
+
+.seven{
+  margin-top: 400px;
+}
+
+.eight{
+  margin-top: 700px;
+}
+
+.nine{
+  margin-top: 1000px;
+}
+.ten{
+  margin-top: 1300px;
+}
+.zero2{
+  margin-top: -300px;
+}
+
+.dotcontainer3{
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.dot3{
+  background-color: greenyellow;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  box-shadow: -2px 0px 20px 3px greenyellow;
+ animation-name: diag;
+ animation-duration:80s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+ z-index: 0;
+  
+}
+@keyframes diag {
+  0% {
+    transform:  matrix(-1, -0.5, 0.5, -1, -0, -100) translateY(-500px) ;
+    
+  }
+  50% {
+    transform:translateY(0px);
+  
+  }
+  100%{transform: matrix(-1, -0.5, 0.5, -1, -0, -100) translateY(-500px);}
+  
+}
+
+.oneb{
+  margin-top: 500px;
+}
+
+.twob{
+  margin-top: 800px;
+}
+
+.threeb {
+  margin-top: 1500px;
+}
+.fourb{
+margin-top: 1700px;
+
+}
+.fiveb{
+margin-top: 1400px;
+}
+.sixb{
+  margin-top: 1600px;
+}
+
+.sevenb{
+  margin-top: 900px;
+}
+.eightb{
+  margin-top: 400px;
+}
+.nineb{
+  margin-top: 100px;
+}
+.dotcontainer4{
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+ 
 }
